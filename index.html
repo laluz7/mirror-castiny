@@ -2,31 +2,614 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Castiny - Site en construction">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Castiny - Under Construction</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin-top: 10%;
-    }
-    img {
-      width: 300px;
-      max-width: 90%;
-    }
-  </style>
+  <title>Castiny – Média jeux vidéo par les joueurs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plateforme gaming communautaire. Partage tes opinions et ressentis sur les jeux vidéo sans biais commercial. Feed personnalisé et forum pour vrais joueurs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚧 Under Construction 🚧</h1>
-  <img src="construction_pikachu.gif" alt="Under Construction">
-  <p>Check back soon!</p>
+  <!-- Background Effects -->
+  <div class="bg-gradient"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">CASTINY</span>
+      </div>
+      <div class="header-progress">
+        <div class="progress-text">
+          <span class="progress-label">Découverte Castiny</span>
+          <span class="progress-status"><span id="page-progress-percentage">0</span>% exploré</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="page-progress-bar"></div>
+        </div>
+      </div>
+      <button type="button" class="btn-primary btn-header" onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})">
+        <span>Rejoindre</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-text">Pour les joueurs, par les joueurs</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-line" data-text="La voix des">La voix des</span>
+          <span class="hero-line hero-accent" data-text="vrais joueurs">vrais joueurs</span>
+        </h1>
+        <p class="hero-description">
+          La plateforme où les joueurs te disent vraiment si un jeu vaut ton temps et ton argent, sans sponsor caché.
+        </p>
+        
+        <div class="hero-actions">
+          <button type="button" class="btn-primary btn-hero" onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})">
+            <span>Rejoindre la beta</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="articles-showcase">
+        <div class="articles-grid">
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://wallpapers.com/images/featured/cyberpunk-pixel-art-d7c6sod1akhbqbba.jpg" alt="Cyberpunk 2077" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwe201d8b5/images/large/67d3f94f3e47486df66eb87d.jpg?sw=1200&sh=675&sm=fit" alt="Assassin's Creed Valhalla" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1200/b_white/f_auto/q_auto/store/software/switch2/70010000096821/f20258999e8d852a496dad2961a87faf2b119488f97fb81442f378043e58b000" alt="The Legend of Zelda" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/common/ve-overview/Chimera_LP_VE_Operator-Collection-update.webp" alt="Call of Duty" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_02_With_Logos_landscape.93ab5523.jpg&w=3840&q=75" alt="Grand Theft Auto VI" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://gmedia.playstation.com/is/image/SIEPDC/section5a-characters-tyr?fmt=png-alpha&scl=1" alt="God of War Ragnarök" loading="lazy">
+            </div>
+          </article>
+          <!-- Duplicate for seamless loop -->
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://wallpapers.com/images/featured/cyberpunk-pixel-art-d7c6sod1akhbqbba.jpg" alt="Cyberpunk 2077" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwe201d8b5/images/large/67d3f94f3e47486df66eb87d.jpg?sw=1200&sh=675&sm=fit" alt="Assassin's Creed Valhalla" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1200/b_white/f_auto/q_auto/store/software/switch2/70010000096821/f20258999e8d852a496dad2961a87faf2b119488f97fb81442f378043e58b000" alt="The Legend of Zelda" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/common/ve-overview/Chimera_LP_VE_Operator-Collection-update.webp" alt="Call of Duty" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_02_With_Logos_landscape.93ab5523.jpg&w=3840&q=75" alt="Grand Theft Auto VI" loading="lazy">
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-image">
+              <div class="article-overlay"></div>
+              <img src="https://gmedia.playstation.com/is/image/SIEPDC/section5a-characters-tyr?fmt=png-alpha&scl=1" alt="God of War Ragnarök" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ce qu'on fait -->
+    <section class="section value-proposition-section">
+      <div class="subheading">Le concept</div>
+      <h2>Une plateforme communautaire<br>sans compromis</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card card-base">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4.5 16.5c-1-1.5-1-4 1-5.5s5.5-1 7.5-3 3.5-4.5 5.5-3 2.5 4.5 1 6.5-3 5.5-5 7.5-4.5 3.5-6.5 1.5-3-1.5-4-3z"/>
+              <path d="M9 13l6-6"/>
+            </svg>
+          </div>
+          <h3>Feed sur mesure</h3>
+          <p>Ton feed, pas celui des éditeurs.<br>Plus tu joues, plus il devient malin.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Forums actifs</h3>
+          <p>Débats, hot takes et vraies reco.<br>Sans trolls qui crient « git gud » toutes les 2 minutes.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Avis authentiques</h3>
+          <p>Écrits par des gens qui ont lancé le jeu plus de 10 minutes.<br>0 communiqué de presse, 0 sponsor caché.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aperçu produit -->
+    <section class="section product-preview-section">
+      <div class="subheading">À quoi ça ressemble ?</div>
+      <h2>Un feed, des forums,<br>ton profil joueur.</h2>
+
+      <div class="product-preview-grid">
+        <div class="product-preview-column card-base">
+          <h3>Feed personnalisé</h3>
+          <p>Un fil qui apprend de tes jeux : micro‑avis, pavés passionnés, listes « à farmer » ou « à oublier ».</p>
+        </div>
+        <div class="product-preview-column card-base">
+          <h3>Forums par jeux & moods</h3>
+          <p>Des salons par jeu et par humeur : chill, tryhard, coop 3h du mat'…</p>
+        </div>
+        <div class="product-preview-column card-base">
+          <h3>Ton profil Castiny</h3>
+          <p>Ton vrai CV de joueur : XP, niveau, badges, et impact réel sur le feed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis des joueurs -->
+    <section class="section player-comments-section">
+      <div class="subheading">La voix des joueurs</div>
+      <h2>Des avis authentiques<br>sans filtre</h2>
+
+      <div class="comments-grid">
+        <div class="comment-card card-base">
+          <div class="comment-content">
+            <p class="comment-text">"Je ne pense pas que ce jeu soit trop bon. Il manque de profondeur et les mécaniques sont répétitives."</p>
+            <div class="comment-author">
+              <span class="comment-username">@GamerPro92</span>
+              <span class="comment-game">sur Elden Ring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-card card-base">
+          <div class="comment-content">
+            <p class="comment-text">"Ce jeu est trop fort, trop cool ! J'ai passé 200h dessus sans m'en rendre compte. Worth every penny."</p>
+            <div class="comment-author">
+              <span class="comment-username">@NoctisFan</span>
+              <span class="comment-game">sur Final Fantasy XVI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-card card-base">
+          <div class="comment-content">
+            <p class="comment-text">"Ça ne vaut pas le coût des épisodes. Le contenu est trop léger pour le prix demandé. Décevant."</p>
+            <div class="comment-author">
+              <span class="comment-username">@IndieLover</span>
+              <span class="comment-game">sur The Last of Us Part II</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-card card-base">
+          <div class="comment-content">
+            <p class="comment-text">"Un des meilleurs jeux de l'année. La narration est incroyable et le gameplay est fluide. Masterpiece."</p>
+            <div class="comment-author">
+              <span class="comment-username">@StorySeeker</span>
+              <span class="comment-game">sur Baldur's Gate 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nos chiffres -->
+    <section class="section">
+      <div class="subheading">Le problème</div>
+      <h2>72% des Français jouent.<br>1 sur 2 ne fait <span class="accent-text">plus confiance</span> aux avis.</h2>
+
+      <div class="section-note section-note-badge">
+        <div class="badge-content">
+          <span class="badge-project">Projet entrepreneurial</span>
+          <span class="badge-accompanied">Accompagné par</span>
+        </div>
+        <div class="pepite-logo-wrapper">
+          <svg class="pepite-logo" viewBox="0 0 240 55" xmlns="http://www.w3.org/2000/svg">
+            <!-- Dots pattern (stylized P) - constellation pattern matching official logo -->
+            <g opacity="0.85">
+              <!-- Main P shape with organic dot cluster -->
+              <circle cx="8" cy="12" r="4" fill="#3B82F6"/>
+              <circle cx="6" cy="16" r="3" fill="#3B82F6"/>
+              <circle cx="9" cy="19" r="2.5" fill="#3B82F6"/>
+              <circle cx="12" cy="18" r="3" fill="#3B82F6"/>
+              <circle cx="14" cy="15" r="2.5" fill="#3B82F6"/>
+              <circle cx="16" cy="12" r="3" fill="#3B82F6"/>
+              <circle cx="13" cy="10" r="2" fill="#3B82F6"/>
+              <circle cx="10" cy="9" r="1.8" fill="#3B82F6"/>
+              <circle cx="7" cy="10" r="1.8" fill="#3B82F6"/>
+              <circle cx="5" cy="13" r="1.8" fill="#3B82F6"/>
+              <circle cx="4" cy="17" r="1.5" fill="#3B82F6"/>
+              <circle cx="6" cy="20" r="1.5" fill="#3B82F6"/>
+              <circle cx="11" cy="21" r="1.5" fill="#3B82F6"/>
+              <circle cx="15" cy="20" r="1.2" fill="#3B82F6"/>
+              <circle cx="18" cy="17" r="1.2" fill="#3B82F6"/>
+              <circle cx="19" cy="14" r="1.2" fill="#3B82F6"/>
+              <circle cx="17" cy="11" r="1" fill="#3B82F6"/>
+              <circle cx="14" cy="8" r="1" fill="#3B82F6"/>
+              <circle cx="11" cy="7" r="1" fill="#3B82F6"/>
+              <circle cx="8" cy="8" r="1" fill="#3B82F6"/>
+            </g>
+            <!-- Text "pépité" - lowercase with accents -->
+            <text x="42" y="22" font-family="var(--font-primary), 'Inter', sans-serif" font-size="22" font-weight="600" fill="#3B82F6" letter-spacing="-0.01em">Pépite</text>
+            <!-- Text "Pays de la Loire" - centered below -->
+            <text x="42" y="38" font-family="var(--font-primary), 'Inter', sans-serif" font-size="11" font-weight="400" fill="#3B82F6" letter-spacing="0.02em" text-anchor="start">Pays de la Loire</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card card-base">
+          <div class="stat-value">39,1 M</div>
+          <div class="stat-label">de joueurs en France</div>
+          <div class="stat-source">Étude Médiamétrie – AFJV, 2023</div>
+        </div>
+
+        <div class="stat-card card-base">
+          <div class="stat-value" data-original="72&nbsp;%">72&nbsp;%</div>
+          <div class="stat-label">des Français jouent</div>
+          <div class="stat-source">Médiamétrie – AFJV, 2023</div>
+        </div>
+
+        <div class="stat-card card-base">
+          <div class="stat-value">3,32 Md</div>
+          <div class="stat-label">de joueurs dans le monde</div>
+          <div class="stat-source">Exploding Topics, 2024</div>
+        </div>
+
+        <div class="stat-card card-base">
+          <div class="stat-value">1 sur 2</div>
+          <div class="stat-label">ne fait pas confiance aux avis en ligne</div>
+          <div class="stat-source">Rapport OCDE sur les avis &amp; notations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre approche -->
+    <section class="section soul-section">
+      <div class="subheading">Notre approche</div>
+      <h2>Quatre règles.<br>Zéro compromis.</h2>
+
+      <div class="values-grid">
+        <div class="value-card card-base">
+          <div class="value-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <path d="M6 6V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>100% communautaire</h3>
+          <p>Pas de rédaction, pas de ton professoral.<br>Tu écris, tu votes, tu fais la méta.</p>
+        </div>
+
+        <div class="value-card card-base">
+          <div class="value-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Zéro sponsor</h3>
+          <p>Pas d'éditeurs dans les DM.<br>Pas de briefs à respecter. Juste la commu.</p>
+        </div>
+
+        <div class="value-card card-base">
+          <div class="value-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Toutes les voix</h3>
+          <p>Casual, tryhard, fan d'indé obscur ou de gros AAA.<br>Personne ne te juge (sauf un peu pour ton KD).</p>
+        </div>
+
+        <div class="value-card card-base">
+          <div class="value-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Débats ouverts</h3>
+          <p>On aime les débats qui piquent, pas les attaques perso.<br>Le sel sur les jeux, pas sur les gens.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="section cta-section" id="cta">
+      <div class="cta-block">
+        <div class="cta-content">
+          <h2>Prêt à changer les règles ?</h2>
+          <p>
+            Inscris-toi pour recevoir l'invite beta et ton badge <strong>Founding player</strong> dès l'ouverture.
+          </p>
+          <!-- TODO: Brancher ce formulaire à l’outil de collecte d’emails (Formspree, backend, etc.) -->
+          <form class="cta-form" onsubmit="event.preventDefault(); document.querySelector('.cta-confirmation').classList.add('visible');">
+            <div class="cta-form-fields">
+              <label for="cta-email" class="sr-only">Ton email pour rejoindre la beta</label>
+              <input
+                id="cta-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="cta-input"
+                placeholder="Ton email gamer"
+              >
+              <button type="submit" class="btn-primary btn-gold btn-cta">
+                <span>Rejoindre la liste d’attente</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <p class="cta-privacy">Pas de spam, pas de newsletter cringe. Juste le mail de lancement et ton lien pour créer ton profil.</p>
+          </form>
+          <a
+            href="#"
+            class="cta-discord-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rejoindre la communauté Discord en attendant l’ouverture de la beta
+          </a>
+          <p class="cta-confirmation">GG, c’est noté. Tu recevras un mail dès que la beta sera ouverte pour créer ton profil Castiny.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>© 2024 Castiny – Tous droits réservés.</span>
+      <span>Projet en construction, comme ton backlog Steam.</span>
+    </footer>
+  </main>
+
+  <script>
+    // Advanced scroll animations with stagger and smooth easing
+    const observerOptions = {
+      threshold: 0.05,
+      rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 120);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Enhanced stagger animation for cards with 3D transforms
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+            // Add a subtle bounce effect
+            entry.target.style.animationDelay = `${index * 0.1}s`;
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.feature-card, .stat-card, .value-card, .article-card, .comment-card').forEach((card) => {
+      cardObserver.observe(card);
+    });
+
+
+
+    // Enhanced number counter animation with easing
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const originalText = entry.target.getAttribute('data-original') || entry.target.textContent;
+          entry.target.setAttribute('data-original', originalText);
+          
+          const text = originalText.trim();
+          
+          // Animate percentages
+          if (text.includes('%')) {
+            const numValue = parseFloat(text.replace('%', '').replace(/\s/g, ''));
+            if (!isNaN(numValue)) {
+              const animateValue = (start, end, duration) => {
+                let startTimestamp = null;
+                const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+                
+                const step = (timestamp) => {
+                  if (!startTimestamp) startTimestamp = timestamp;
+                  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                  const eased = easeOutCubic(progress);
+                  const current = Math.floor(eased * (end - start) + start);
+                  entry.target.textContent = current + ' %';
+                  
+                  if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                  } else {
+                    entry.target.textContent = originalText;
+                  }
+                };
+                window.requestAnimationFrame(step);
+              };
+              animateValue(0, numValue, 2500);
+            }
+          }
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.stat-value').forEach(stat => {
+      statsObserver.observe(stat);
+    });
+
+    // Simple page progress indicator for gamification strip
+    const progressBar = document.getElementById('page-progress-bar');
+    const progressLabel = document.getElementById('page-progress-percentage');
+    let maxProgressReached = 0;
+    let rewardShown = false;
+
+    const showReward = () => {
+      if (rewardShown) return;
+      rewardShown = true;
+      
+      // Créer l'élément de récompense
+      const reward = document.createElement('div');
+      reward.className = 'progress-reward';
+      reward.innerHTML = `
+        <div class="reward-content">
+          <div class="reward-icon">🎁</div>
+          <div class="reward-text">
+            <h3>Félicitations !</h3>
+            <p>Tu as découvert 100% de Castiny !<br>Tu débloques le badge <strong>Founding Explorer</strong></p>
+            <form class="reward-form" onsubmit="event.preventDefault(); const email = this.querySelector('.reward-email').value; if(email) { window.open('https://discord.gg/castiny', '_blank'); this.closest('.progress-reward').remove(); }">
+              <div class="reward-form-group">
+                <label for="reward-email" class="sr-only">Ton email</label>
+                <input 
+                  type="email" 
+                  id="reward-email" 
+                  class="reward-email" 
+                  placeholder="Ton email"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+            </form>
+            <p class="reward-discord-note">Récupère ton cadeau sur <a href="https://discord.gg/castiny" target="_blank" rel="noopener noreferrer" class="reward-discord-link">Discord</a> avec cet email 🎉</p>
+          </div>
+          <button class="reward-close" onclick="this.parentElement.parentElement.remove()">×</button>
+        </div>
+      `;
+      document.body.appendChild(reward);
+      
+      // Animation d'apparition
+      setTimeout(() => {
+        reward.classList.add('visible');
+      }, 100);
+      
+      // Supprimer automatiquement après 8 secondes
+      setTimeout(() => {
+        reward.classList.remove('visible');
+        setTimeout(() => {
+          reward.remove();
+        }, 500);
+      }, 8000);
+    };
+
+    const updatePageProgress = () => {
+      if (!progressBar || !progressLabel) return;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const rawProgress = (scrollTop / docHeight) * 100;
+      const currentProgress = Math.min(100, Math.max(0, Math.round(rawProgress)));
+      
+      // Garder le maximum atteint (ne jamais diminuer)
+      if (currentProgress > maxProgressReached) {
+        maxProgressReached = currentProgress;
+      }
+      
+      // Utiliser le maximum atteint pour l'affichage
+      progressBar.style.width = maxProgressReached + '%';
+      progressLabel.textContent = maxProgressReached;
+      
+      // Afficher la récompense à 100%
+      if (maxProgressReached >= 100 && !rewardShown) {
+        showReward();
+      }
+    };
+
+    updatePageProgress();
+    window.addEventListener('scroll', updatePageProgress);
+
+    // Smooth scroll behavior enhancement
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Performance optimization: reduce motion for users who prefer it
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.style.setProperty('--transition-fast', '0ms');
+      document.documentElement.style.setProperty('--transition-base', '0ms');
+      document.documentElement.style.setProperty('--transition-smooth', '0ms');
+    }
+  </script>
 </body>
 </html>
